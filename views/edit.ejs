@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css"/>
+  <title>Edit Post</title>
+</head>
+<body>
+ 
+  <h1>Edit  Post</h1> <hr>
+  <div class="navbardiv">
+    <a class="navbar-brand" href="#">ANSWER POSTS</a>
+      <button> <a class="nav-link " aria-current="page" href="http://localhost:8080/posts">Home</a></button>
+      <button><a class="nav-link" href="http://localhost:8080/posts/new">ADD NEW</a></button>
+      <form class="d-flex" role="search" method="get" action="/search">
+        <input class="form-control me-2" type="search" placeholder="Search" name="userName" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  <hr><br>
+  <p> Post id:    <%= post.id %>   </p>
+  <p> Post username: @<%= post.username %></p>
+ <hr>
+ <div class="edit">
+ <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+   <h3>Edit your Post</h3>
+   <textarea rows="7"  cols="35" name="content">
+     <%= post.content %>
+   </textarea> <br>
+   <button>Submit</button>
+ </form>
+ </div>
+  <hr>
+</body>
+</html>

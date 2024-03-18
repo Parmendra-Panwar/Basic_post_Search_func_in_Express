@@ -1,0 +1,117 @@
+body{
+  background-color: rgba(224, 156, 255, 0.199);
+}
+h1 {
+  color: brown;
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+}
+.posts {
+  background-color: aqua;
+  border-radius: 15px;
+  height: 18rem;
+  width: 70%;
+  margin-top: 1rem;
+}
+.posts:hover{
+  scale: 1.02;
+  transition: all ease 1s;
+}
+.user{
+  padding: 10px;
+  font-style: italic;
+  display: flex;
+  margin-left: 2rem;
+}
+.content{
+  padding: 15px;
+  border: 5px double black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  border-radius: 15px;
+  width: 80%;
+}
+.butts{
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+button a{
+  text-decoration: none;
+  color: rgb(173, 253, 14);
+}
+
+button{
+  background-color: rgb(43, 43, 248);
+  height: 35px;
+  border: 3px double black;
+  border-radius: 3px;
+  color: rgb(173, 253, 14);
+}
+button:hover{
+  background-color: rgb(247, 107, 252);
+  transition: all ease 0.5s;
+}
+
+.navbardiv{
+  display: flex;
+  justify-content: space-evenly;
+}
+.edit{
+  padding: 25px;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

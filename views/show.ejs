@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css"/>
+  <title>A SINGLE POST</title>
+</head>
+<body>
+  <center>
+    <h1>HERE IS YOUR POST</h1> <hr>
+    <div class="navbardiv">
+      <a class="navbar-brand" href="#">ANSWER POSTS</a>
+        <button> <a class="nav-link " aria-current="page" href="http://localhost:8080/posts">Home</a></button>
+        <button><a class="nav-link" href="http://localhost:8080/posts/new">ADD NEW</a></button>
+        <form class="d-flex" role="search" method="get" action="/search">
+          <input class="form-control me-2" type="search" placeholder="Search" name="userName" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    <hr>
+  <p>Post id : <%= post.id %></p>
+  <div class="posts">
+    <h3 class="user">@<%= post.username %> </h3>
+    <hr>
+    <div class="content">
+    <h4> POST -> <%= post.content %></h4>
+    </div>
+    <div class="butts" style="margin-top: 10px;">
+      <div>
+        <button><a href="http://localhost:8080/posts/<%= post.id %>/edit"> Edit This POST</a></button>
+      </div>
+      <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+          <button> DELETE </button>
+      </form>
+     </div>
+  </div>
+  <br><br><br><br>
+  <hr>
+  <div class="foooter">
+    <div>
+      <button><a href="http://localhost:8080/posts/new"> Add New Post</a></button>
+    </div>
+    <div>
+      <button><a href="http://localhost:8080/upload"> Upload Image</a></button>
+    </div>
+  </div>
+  <hr> 
+  </center>
+</body>
+</html>
